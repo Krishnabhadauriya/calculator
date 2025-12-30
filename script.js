@@ -7,11 +7,19 @@ buttons.forEach(button => {
   button.addEventListener("click", () => {
     const value = button.innerText;
 
+    // AC
     if (value === "AC") {
       expression = "";
       result.value = "";
     }
 
+    // DELETE (1st line wala ×)
+    else if (value === "×" && button.classList.contains("tain")) {
+      expression = expression.slice(0, -1);
+      result.value = expression;
+    }
+
+    // =
     else if (value === "=") {
       try {
         expression = expression
@@ -25,6 +33,7 @@ buttons.forEach(button => {
       }
     }
 
+    // +/-
     else if (value === "+/-") {
       if (expression) {
         expression = String(-Number(expression));
@@ -32,6 +41,7 @@ buttons.forEach(button => {
       }
     }
 
+    // Normal buttons
     else {
       expression += value;
       result.value = expression;
