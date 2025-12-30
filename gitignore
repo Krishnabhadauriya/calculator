@@ -1,0 +1,24 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Node / npm (agar future me use karo)
+node_modules/
+package-lock.json
+
+# Build / temp files
+dist/
+build/
+.cache/
+
+# Environment files
+.env
+.env.local
